@@ -1,18 +1,13 @@
-module.exports = {
-  parser: '@typescript-eslint/parser',
-  extends: [
-    'airbnb-base',
-    'plugin:@typescript-eslint/recommended'
+module.exports =  {
+  parser:  '@typescript-eslint/parser',
+  extends:  [
+    'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
   ],
-  plugins: ['@typescript-eslint'],
-  env: {
-    browser: true,
-    es6: true,
-    jest: true
+  parserOptions:  {
+    ecmaVersion:  2020,
+    sourceType:  'module',
+    project: './tsconfig.json'
   },
-  rules: {
-    'no-console': 'off',
-    'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': ['error']
-  }
-};
+  rules:  {
+  },
+}
